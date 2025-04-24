@@ -1,5 +1,3 @@
-
-
 package entidadFinanciera;
 
 /**
@@ -19,14 +17,17 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
     
-    //Constructor sin parametros que inicializa la clase cuenta
+    /**
+     * Constructor sin parametros que inicializa la clase cuenta
+     */
     public CCuenta()
     {
     }
+    
     /**
      * Constructor que inicializa los parametros de la clase cuenta
      * @param nom nombre de la persona titular
-     * @param cue 
+     * @param cue cuenta de la persona titular
      * @param sal cantidad de dinero que tiene la cuenta
      * @param tipo interes que tiene la cuenta
      */
@@ -36,7 +37,9 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
-    /*
+    
+    
+    /**
      * Obtiene el valor nombre de la persona titular
      * @return nombre de la persona titular
      */
@@ -44,50 +47,62 @@ public class CCuenta {
     public String getNombre() {
 		return nombre;
 	}
-    /*
+    
+    
+    /**
 	 *Establece en nombre titular 
 	 *@param nombre de la persona titular
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	 /*
+	
+	
+	 /**
      * Obtiene el saldo actual de la cuenta
      * @return el saldo actual 
      */
 	public double getSaldo() {
 		return saldo;
 	}
-	/*
+	
+	
+	/**
 	 *Establece un nuevo valor para el saldo de la cuenta
 	 *@param saldo el nuevo saldo a asignar 
 	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	 /*
+	
+	
+	 /**
      * Obtiene el tipo de interes que tiene la cuenta
      * @return el interes contratado
      */
 	public double getTipoInterés() {
 		return tipoInterés;
 	}
-	/*
+	
+	
+	/**
 	 *Establece el tipo de interes de la cuenta
-	 *@param interes establecido 
+	 *@param tipoInterés interes establecido 
 	 */
 	public void setTipoInterés(double tipoInterés) {
 		this.tipoInterés = tipoInterés;
 	}
 	
-	/*
+	/**
 	 * Devuelve el estado de la cuenta
 	 * @return saldo de la cuenta
 	 */
 	public double estado(){
         return this.saldo;
     }
-	/*
+	
+	
+	/**
 	 * Ingresa una cantidad en la cuenta
 	 * @param cantidad cantidad a ingresas
 	 * @throws Exception si la cantidad es negativa
@@ -98,7 +113,8 @@ public class CCuenta {
             throw new Exception(ERRORCANTIDADNEGATIVA);
         saldo = saldo + cantidad;
     }
-    /*
+    
+    /**
      * Retira una cantidad
      * @param cantidad cantidad a retirar
      * @throws Exception si la cantidad es 0 o negativa
